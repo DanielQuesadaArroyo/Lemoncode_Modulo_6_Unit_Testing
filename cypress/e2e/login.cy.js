@@ -1,13 +1,13 @@
 describe('Login Tests', () => {
     it('Accede a la login page', () => {
-        cy.visit('http://localhost:5173');
+        cy.visit('/');
     });
 
     it('Accede a la login page y hace focus en el input de nombre y contraseña', () => {
         // Arrange
 
         // Act
-        cy.visit('http://localhost:5173');
+        cy.visit('/');
         cy.findByRole('button', { name: 'Login' }).should('be.visible');
 
         // Assert
@@ -23,7 +23,7 @@ describe('Login Tests', () => {
         cy.on('window:alert', cy.stub().as('alertStub'));
 
         // Act
-        cy.visit('http://localhost:5173');
+        cy.visit('/');
 
         cy.findByRole('button', { name: 'Login' }).should('be.visible'); // Espera a que cargue
 

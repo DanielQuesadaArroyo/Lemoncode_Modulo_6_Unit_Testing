@@ -3,7 +3,7 @@ const { getByPlaceholderText } = require("@testing-library/dom");
 describe('Employee list Tests', () => {
     it('Accede a la pagina de empleados y haz click en editar y eliminar', () => {
         // Arrange
-        cy.visit('http://localhost:5173');
+        cy.visit('/');
         const user = 'admin';
         const password = 'test';
 
