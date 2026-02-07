@@ -1,13 +1,17 @@
-import React from 'react';
-import { usePromiseTracker } from 'react-promise-tracker';
-import { Modal } from '@mui/material';
-import Loader from 'react-spinners/ScaleLoader';
-import * as classes from './spinner.styles';
+import React from "react";
+import { usePromiseTracker } from "react-promise-tracker";
+import { Modal } from "@mui/material";
+import Loader from "react-spinners/ScaleLoader";
+import * as classes from "./spinner.styles";
 
 export const SpinnerComponent: React.FunctionComponent = () => {
   const { promiseInProgress } = usePromiseTracker();
   return (
-    <Modal open={promiseInProgress} className={classes.modal}>
+    <Modal
+      open={promiseInProgress}
+      className={classes.modal}
+      data-testid="spinner-modal"
+    >
       <div className={classes.loaderContainer}>
         <Loader />
       </div>
